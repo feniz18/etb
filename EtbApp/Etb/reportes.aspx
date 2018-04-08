@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Etb/Etb.Master" AutoEventWireup="true" CodeBehind="reportes.aspx.cs" Inherits="EtbApp.Etb.Formulario_web12" %>
+
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,7 +20,12 @@
     <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <asp:GridView ID="tabla" runat="server" CssClass="table table-striped"></asp:GridView>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                     <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Arial" Font-Size="8pt"
+                        Width="100%" ShowCredentialPrompts="false" ShowParameterPrompts="false"
+                        ZoomMode="PageWidth" SizeToReportContent="true" Height="70px">
+        
+                   </rsweb:ReportViewer>
                 </div>
 
             </div>           

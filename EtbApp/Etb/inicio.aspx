@@ -6,10 +6,8 @@
                 <a class="navbar-brand" href="#">Informacion ETB</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="etbFactura.aspx">Subir factura</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="etbFactura.aspx">Subir factura</a></li>
+                <li><a href="reportes.aspx">Reportes</a></li>
             </ul>
         </div>
     </nav>

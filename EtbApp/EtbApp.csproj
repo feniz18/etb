@@ -139,6 +139,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Etb\etbFactura.aspx" />
+    <Content Include="Etb\reportes.aspx" />
     <Content Include="Etb\inicio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="Etb\etbFactura.aspx.designer.cs">
       <DependentUpon>etbFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etb\reportes.aspx.cs">
+      <DependentUpon>reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etb\reportes.aspx.designer.cs">
+      <DependentUpon>reportes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Etb\inicio.aspx.cs">
       <DependentUpon>inicio.aspx</DependentUpon>

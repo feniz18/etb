@@ -10,9 +10,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="etbFactura.aspx">Subir factura</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="reportes.aspx">Reportes</a></li>
             </ul>
         </div>
     </nav>
@@ -32,10 +30,6 @@
                     <asp:Label ID="textoArchivo" runat="server" Text="Label"></asp:Label>
                 </div>
             </div>
-            <div class="row">
-                <div class = "col-md-12">
-                    <asp:GridView ID="informacion" runat="server"></asp:GridView>
-                </div>
-            </div>
+            
     </div>
 </asp:Content>

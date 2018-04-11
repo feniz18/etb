@@ -22,10 +22,24 @@
                 <div class="col-md-12">
                     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                      <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Arial" Font-Size="8pt"
-                        Width="100%" ShowCredentialPrompts="false" ShowParameterPrompts="false"
-                        ZoomMode="PageWidth" SizeToReportContent="true" Height="70px">
+                        Width="100%" ShowCredentialPrompts="False" ShowParameterPrompts="False"
+                        ZoomMode="PageWidth" SizeToReportContent="True" Height="70px" BackColor="" ClientIDMode="AutoID" HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" InternalBorderWidth="1px" LinkActiveColor="" LinkActiveHoverColor="" LinkDisabledColor="" PrimaryButtonBackgroundColor="" PrimaryButtonForegroundColor="" PrimaryButtonHoverBackgroundColor="" PrimaryButtonHoverForegroundColor="" SecondaryButtonBackgroundColor="" SecondaryButtonForegroundColor="" SecondaryButtonHoverBackgroundColor="" SecondaryButtonHoverForegroundColor="" SplitterBackColor="" ToolbarDividerColor="" ToolbarForegroundColor="" ToolbarForegroundDisabledColor="" ToolbarHoverBackgroundColor="" ToolbarHoverForegroundColor="" ToolBarItemBorderColor="" ToolBarItemBorderStyle="Solid" ToolBarItemBorderWidth="1px" ToolBarItemHoverBackColor="" ToolBarItemPressedBorderColor="51, 102, 153" ToolBarItemPressedBorderStyle="Solid" ToolBarItemPressedBorderWidth="1px" ToolBarItemPressedHoverBackColor="153, 187, 226">
+                         <LocalReport ReportPath="reporte\Report1.rdlc">
+                             <DataSources>
+                                 <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSet1" />
+                             </DataSources>
+                         </LocalReport>
         
                    </rsweb:ReportViewer>
+                    <asp:ObjectDataSource ID="ObjectDataSource1"  runat="server" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="EtbApp.modelo.DataSet1TableAdapters.ETBTableAdapter">
+                        <InsertParameters>
+                            <asp:Parameter Name="REFERENCIA_PAGO" Type="String" />
+                            <asp:Parameter Name="CUENTA_CONTRATO" Type="String" />
+                            <asp:Parameter Name="FECHA_PAGO" Type="DateTime" />
+                            <asp:Parameter Name="FECHA_LIMITE" Type="DateTime" />
+                            <asp:Parameter Name="VALOR_A_PAGAR" Type="Int64" />
+                        </InsertParameters>
+                    </asp:ObjectDataSource>
                 </div>
 
             </div>           

@@ -24,7 +24,7 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT REFERENCIA_PAGO, CUENTA_CONTRATO, FECHA_PAGO, FECHA_LIMITE, VALOR_A_PAGAR,CONCAT('(415)77071815000017(8020)', REFERENCIA_PAGO,'(3900)',VALOR_A_PAGAR,'(96)',FECHA_LIMITE) AS CODIGO_BARRAS  FROM dbo.ETB</CommandText>
+                    <CommandText>SELECT REFERENCIA_PAGO, CUENTA_CONTRATO, FECHA_PAGO, FECHA_LIMITE, VALOR_A_PAGAR,CONCAT('415770718150000178020', REFERENCIA_PAGO,'3900',VALOR_A_PAGAR,'96',FECHA_LIMITE) AS CODIGO_BARRAS ,CONCAT('(415)77071815000017(8020)', REFERENCIA_PAGO,'(3900)',VALOR_A_PAGAR,'(96)',FECHA_LIMITE) AS CODIGO_BARRAS_FOOTER  FROM dbo.ETB</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -37,6 +37,7 @@
               <Mapping SourceColumn="FECHA_LIMITE" DataSetColumn="FECHA_LIMITE" />
               <Mapping SourceColumn="VALOR_A_PAGAR" DataSetColumn="VALOR_A_PAGAR" />
               <Mapping SourceColumn="CODIGO_BARRAS" DataSetColumn="CODIGO_BARRAS" />
+              <Mapping SourceColumn="CODIGO_BARRAS_FOOTER" DataSetColumn="CODIGO_BARRAS_FOOTER" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -48,7 +49,7 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ETB" msprop:Generator_TableClassName="ETBDataTable" msprop:Generator_TableVarName="tableETB" msprop:Generator_RowChangedName="ETBRowChanged" msprop:Generator_TablePropName="ETB" msprop:Generator_RowDeletingName="ETBRowDeleting" msprop:Generator_RowChangingName="ETBRowChanging" msprop:Generator_RowEvHandlerName="ETBRowChangeEventHandler" msprop:Generator_RowDeletedName="ETBRowDeleted" msprop:Generator_RowClassName="ETBRow" msprop:Generator_UserTableName="ETB" msprop:Generator_RowEvArgName="ETBRowChangeEvent">
+        <xs:element name="ETB" msprop:Generator_TableClassName="ETBDataTable" msprop:Generator_TableVarName="tableETB" msprop:Generator_TablePropName="ETB" msprop:Generator_RowDeletingName="ETBRowDeleting" msprop:Generator_RowChangingName="ETBRowChanging" msprop:Generator_RowEvHandlerName="ETBRowChangeEventHandler" msprop:Generator_RowDeletedName="ETBRowDeleted" msprop:Generator_UserTableName="ETB" msprop:Generator_RowChangedName="ETBRowChanged" msprop:Generator_RowEvArgName="ETBRowChangeEvent" msprop:Generator_RowClassName="ETBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="REFERENCIA_PAGO" msprop:Generator_ColumnVarNameInTable="columnREFERENCIA_PAGO" msprop:Generator_ColumnPropNameInRow="REFERENCIA_PAGO" msprop:Generator_ColumnPropNameInTable="REFERENCIA_PAGOColumn" msprop:Generator_UserColumnName="REFERENCIA_PAGO">
@@ -69,6 +70,13 @@
               <xs:element name="FECHA_LIMITE" msprop:Generator_ColumnVarNameInTable="columnFECHA_LIMITE" msprop:Generator_ColumnPropNameInRow="FECHA_LIMITE" msprop:Generator_ColumnPropNameInTable="FECHA_LIMITEColumn" msprop:Generator_UserColumnName="FECHA_LIMITE" type="xs:dateTime" />
               <xs:element name="VALOR_A_PAGAR" msprop:Generator_ColumnVarNameInTable="columnVALOR_A_PAGAR" msprop:Generator_ColumnPropNameInRow="VALOR_A_PAGAR" msprop:Generator_ColumnPropNameInTable="VALOR_A_PAGARColumn" msprop:Generator_UserColumnName="VALOR_A_PAGAR" type="xs:long" />
               <xs:element name="CODIGO_BARRAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCODIGO_BARRAS" msprop:Generator_ColumnPropNameInRow="CODIGO_BARRAS" msprop:Generator_ColumnPropNameInTable="CODIGO_BARRASColumn" msprop:Generator_UserColumnName="CODIGO_BARRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="149" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO_BARRAS_FOOTER" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCODIGO_BARRAS_FOOTER" msprop:Generator_ColumnPropNameInRow="CODIGO_BARRAS_FOOTER" msprop:Generator_ColumnPropNameInTable="CODIGO_BARRAS_FOOTERColumn" msprop:Generator_UserColumnName="CODIGO_BARRAS_FOOTER" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="149" />

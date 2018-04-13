@@ -18,8 +18,37 @@
         </div>
     </nav>
     <div class="container-fluid">
+
+<button type="button" class="btn btn-warning
+    
+    
+    
+    
+    btn-lg" data-toggle="modal" data-target="#miModal">
+	Abrir modal
+</button>
             <div class="row">
                 <div class="col-md-12">
+                    
+                </div>
+
+            </div>           
+    </div>
+
+
+    <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog  modal-lg" role="document">
+		    <div class="modal-content">
+			    <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+				    </button>
+				    <h4 class="modal-title" id="myModalLabel">Esto es un modal</h4>
+			    </div>
+			    <div class="modal-body">
+				    
+                    <%-- inicio modal --%>
+
                     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                      <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Arial" Font-Size="8pt"
                         Width="100%" ShowCredentialPrompts="False" ShowParameterPrompts="False"
@@ -40,8 +69,11 @@
                             <asp:Parameter Name="VALOR_A_PAGAR" Type="Int64" />
                         </InsertParameters>
                     </asp:ObjectDataSource>
-                </div>
 
-            </div>           
+                    <%-- fin modal --%>
+
+			    </div>
+		    </div>
+	    </div>
     </div>
 </asp:Content>

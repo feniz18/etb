@@ -291,6 +291,8 @@ namespace EtbApp.modelo {
             
             private global::System.Data.DataColumn columnCODIGO_BARRAS;
             
+            private global::System.Data.DataColumn columnCODIGO_BARRAS_FOOTER;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ETBDataTable() {
@@ -374,6 +376,14 @@ namespace EtbApp.modelo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CODIGO_BARRAS_FOOTERColumn {
+                get {
+                    return this.columnCODIGO_BARRAS_FOOTER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace EtbApp.modelo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ETBRow AddETBRow(string REFERENCIA_PAGO, string CUENTA_CONTRATO, System.DateTime FECHA_PAGO, System.DateTime FECHA_LIMITE, long VALOR_A_PAGAR, string CODIGO_BARRAS) {
+            public ETBRow AddETBRow(string REFERENCIA_PAGO, string CUENTA_CONTRATO, System.DateTime FECHA_PAGO, System.DateTime FECHA_LIMITE, long VALOR_A_PAGAR, string CODIGO_BARRAS, string CODIGO_BARRAS_FOOTER) {
                 ETBRow rowETBRow = ((ETBRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         REFERENCIA_PAGO,
@@ -417,7 +427,8 @@ namespace EtbApp.modelo {
                         FECHA_PAGO,
                         FECHA_LIMITE,
                         VALOR_A_PAGAR,
-                        CODIGO_BARRAS};
+                        CODIGO_BARRAS,
+                        CODIGO_BARRAS_FOOTER};
                 rowETBRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowETBRow);
                 return rowETBRow;
@@ -446,6 +457,7 @@ namespace EtbApp.modelo {
                 this.columnFECHA_LIMITE = base.Columns["FECHA_LIMITE"];
                 this.columnVALOR_A_PAGAR = base.Columns["VALOR_A_PAGAR"];
                 this.columnCODIGO_BARRAS = base.Columns["CODIGO_BARRAS"];
+                this.columnCODIGO_BARRAS_FOOTER = base.Columns["CODIGO_BARRAS_FOOTER"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +475,8 @@ namespace EtbApp.modelo {
                 base.Columns.Add(this.columnVALOR_A_PAGAR);
                 this.columnCODIGO_BARRAS = new global::System.Data.DataColumn("CODIGO_BARRAS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCODIGO_BARRAS);
+                this.columnCODIGO_BARRAS_FOOTER = new global::System.Data.DataColumn("CODIGO_BARRAS_FOOTER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCODIGO_BARRAS_FOOTER);
                 this.columnREFERENCIA_PAGO.AllowDBNull = false;
                 this.columnREFERENCIA_PAGO.MaxLength = 50;
                 this.columnCUENTA_CONTRATO.AllowDBNull = false;
@@ -472,6 +486,8 @@ namespace EtbApp.modelo {
                 this.columnVALOR_A_PAGAR.AllowDBNull = false;
                 this.columnCODIGO_BARRAS.ReadOnly = true;
                 this.columnCODIGO_BARRAS.MaxLength = 149;
+                this.columnCODIGO_BARRAS_FOOTER.ReadOnly = true;
+                this.columnCODIGO_BARRAS_FOOTER.MaxLength = 149;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -685,6 +701,22 @@ namespace EtbApp.modelo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CODIGO_BARRAS_FOOTER {
+                get {
+                    try {
+                        return ((string)(this[this.tableETB.CODIGO_BARRAS_FOOTERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CODIGO_BARRAS_FOOTER\' de la tabla \'ETB\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableETB.CODIGO_BARRAS_FOOTERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCODIGO_BARRASNull() {
                 return this.IsNull(this.tableETB.CODIGO_BARRASColumn);
             }
@@ -693,6 +725,18 @@ namespace EtbApp.modelo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCODIGO_BARRASNull() {
                 this[this.tableETB.CODIGO_BARRASColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCODIGO_BARRAS_FOOTERNull() {
+                return this.IsNull(this.tableETB.CODIGO_BARRAS_FOOTERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCODIGO_BARRAS_FOOTERNull() {
+                this[this.tableETB.CODIGO_BARRAS_FOOTERColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -861,6 +905,7 @@ namespace EtbApp.modelo.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("FECHA_LIMITE", "FECHA_LIMITE");
             tableMapping.ColumnMappings.Add("VALOR_A_PAGAR", "VALOR_A_PAGAR");
             tableMapping.ColumnMappings.Add("CODIGO_BARRAS", "CODIGO_BARRAS");
+            tableMapping.ColumnMappings.Add("CODIGO_BARRAS_FOOTER", "CODIGO_BARRAS_FOOTER");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -888,9 +933,7 @@ namespace EtbApp.modelo.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT REFERENCIA_PAGO, CUENTA_CONTRATO, FECHA_PAGO, FECHA_LIMITE, VALOR_A_PAGAR," +
-                "CONCAT(\'(415)77071815000017(8020)\', REFERENCIA_PAGO,\'(3900)\',VALOR_A_PAGAR,\'(96)" +
-                "\',FECHA_LIMITE) AS CODIGO_BARRAS  FROM dbo.ETB";
+            this._commandCollection[0].CommandText = @"SELECT REFERENCIA_PAGO, CUENTA_CONTRATO, FECHA_PAGO, FECHA_LIMITE, VALOR_A_PAGAR,CONCAT('415770718150000178020', REFERENCIA_PAGO,'3900',VALOR_A_PAGAR,'96',FECHA_LIMITE) AS CODIGO_BARRAS ,CONCAT('(415)77071815000017(8020)', REFERENCIA_PAGO,'(3900)',VALOR_A_PAGAR,'(96)',FECHA_LIMITE) AS CODIGO_BARRAS_FOOTER  FROM dbo.ETB";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
